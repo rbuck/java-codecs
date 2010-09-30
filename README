@@ -36,7 +36,7 @@ Description
 
     * Quoted Printable	Defined in RFC 2045, this codec, referred to as "quoted-printable", is intended to represent data that largely consists of octets that correspond to printable characters in the US-ASCII character set. It encodes the data in such a way that the resulting octets are unlikely to be modified by mail transport. If the data being encoded are mostly US-ASCII text, the encoded form of the data remains largely recognizable by humans.
 
-URL Encoded	Defined in HTML 2.0 Forms, this codec, referred to as "x-www-form-urlencoded", is used primarily for HTML form submission.
+    * URL Encoded	Defined in HTML 2.0 Forms, this codec, referred to as "x-www-form-urlencoded", is used primarily for HTML form submission.
 
 User Defined Codecs
 
