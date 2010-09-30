@@ -1,6 +1,6 @@
 Introduction
 
-This codecs library provides a named mapping between encoded sequences of bytes and raw binary data. This class defines methods for creating decoders and encoders and for retrieving the various names associated with a codec. Instances of this class are immutable.
+Codecs provide a named mapping between encoded sequences of bytes and raw binary data. The Codecs class defines methods for creating decoders and encoders and for retrieving the various names associated with a codec.
 
 Codec names
 
@@ -37,6 +37,10 @@ Description
     * Quoted Printable	Defined in RFC 2045, this codec, referred to as "quoted-printable", is intended to represent data that largely consists of octets that correspond to printable characters in the US-ASCII character set. It encodes the data in such a way that the resulting octets are unlikely to be modified by mail transport. If the data being encoded are mostly US-ASCII text, the encoded form of the data remains largely recognizable by humans.
 
 URL Encoded	Defined in HTML 2.0 Forms, this codec, referred to as "x-www-form-urlencoded", is used primarily for HTML form submission.
+
+User Defined Codecs
+
+Codecs may be added by users by implementing the SPI interface; additional codecs found on the classpath will be picked up automatically and returned by the Codecs class.
 
 Author:
     Robert J. Buck
