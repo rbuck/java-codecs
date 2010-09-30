@@ -1,0 +1,68 @@
+<!--
+  ~ Copyright 2010 Robert J. Buck
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~     http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<!doctype html public "-//IETF//DTD HTML//EN">
+<html>
+<head>
+<!--
+ @(#)package.html
+-->
+</head>
+<body bgcolor="white">
+
+Defines codecs, decoders, and encoders, for translating between binary content
+and encoded bytes.
+
+<blockquote><table cellspacing=1 cellpadding=0 summary="Summary of charsets, decoders, and encoders in this package">
+ <tr><th><p align="left">Class name</p></th><th><p align="left">Description</p></th></tr>
+  <tr><td valign=top><tt>{@link com.buck.common.codec.Codec}</tt></td>
+      <td>A named mapping between characters<br>and bytes</td></tr>
+  <tr><td valign=top><tt>{@link com.buck.common.codec.CodecDecoder}</tt></td>
+      <td>Decodes encoded bytes into binary content</td></tr>
+  <tr><td valign=top><tt>{@link com.buck.common.codec.CodecEncoder}&amp;nbsp;&amp;nbsp;</tt></td>
+      <td>Encodes binary content into bytes</td></tr>
+
+</table></blockquote>
+
+<p> A <i>codec</i> is named mapping between sequences of raw bytes, and
+sequences of encoded bytex, in the sense defined in <a
+href="http://ietf.org/rfc/rfc4648.txt"><i>RFC&nbsp;4648</i></a>.  A
+<i>decoder</i> is an engine which transforms encoded bytes in a specific
+encoding into raw bytes (binary content), and an <i>encoder</i> is an engine
+which transforms bytes (binary content) into an encoded sequence of bytes.
+Encoders and decoders operate on byte buffers.  They are collectively referred
+to as <i>codecs</i>.
+
+<p> The {@link com.buck.common.codec.Codec} class defines methods for creating
+    coders for a given codec and for retrieving the various names associated
+    with
+    a codec. It also defines static methods for testing whether a particular
+    codec is supported, for locating codec instances by name, and for
+    constructing a map that contains every codec for which support is available
+    in the current Java virtual machine.
+
+<p> Most users will not use these classes directly; instead they will use the
+existing codec-related services such as XML serialization, which may have been
+reworked to make use of the codec facilities defined in this package.
+
+<p> Support for new codecs can be made available via the interface defined in
+    the {@link com.buck.common.codec.spi.CodecProvider} class in the
+    {@link com.buck.common.codec.spi} package.
+
+    @author Robert J. Buck
+
+</body>
+</html>

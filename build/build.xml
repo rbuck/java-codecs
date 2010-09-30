@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<project name="java-codecs" xmlns:buildflex="http://www.buildflex.com/ant/buildflex" xmlns:ivy="antlib:org.apache.ivy.ant" xmlns:coverage="http://www.buildflex.com/ant/coverage" default="dist">
+
+  <description>java-codecs global build file</description>
+
+  <!--
+  Imports
+  -->
+
+  <import file="../../build/workspace-defs.xml" optional="false"/>
+  <import file="${workspace.build}/targets-internal.xml" optional="false"/>
+
+  <!--
+  Initialize the build system.
+  
+  This target is called by the buildflex initialization logic and should
+  contain the module specific configuration elements.
+  -->
+
+  <target name="module-init">
+    <!-- ========= -->
+    <!-- Metadata  -->
+    <!-- ========= -->
+    <property name="module.name" value="java-codecs"/>
+    <property name="module.version" value=""/>
+    <!-- ========= -->
+    <!-- Libraries -->
+    <!-- ========= -->
+    <path id="library.classpath">
+    </path>
+    <!-- ========= -->
+    <!-- Modules   -->
+    <!-- ========= -->
+    <path id="dependentmodule.classpath">
+    </path>
+    <!-- ========= -->
+    <!-- Tasks     -->
+    <!-- ========= -->
+  </target>
+</project>
