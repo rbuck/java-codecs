@@ -74,6 +74,7 @@ more compact representations of UUID:
 The project has the following dependencies:
 
     Log4j 1.2.17
+    Buck Commons 1.0
 
 # Build Procedure
 
