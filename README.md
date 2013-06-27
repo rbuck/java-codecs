@@ -1,5 +1,5 @@
-Java Commons
-============
+Java Codecs
+===========
 
 [<img src="https://api.travis-ci.org/rbuck/java-codecs.png?branch=master" alt="Build Status" />](http://travis-ci.org/rbuck/java-codecs)
 
