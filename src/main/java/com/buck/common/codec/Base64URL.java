@@ -21,7 +21,7 @@ package com.buck.common.codec;
  * <p/>
  * This implementation does not encode/decode streaming
  * data. You need the data that you will encode/decode
- * already on a byte arrray.
+ * already on a byte array.
  *
  * @author Robert J. Buck
  */
@@ -73,20 +73,20 @@ public class Base64URL extends Codec {
 
     }
 
-    private static boolean isWhiteSpace(byte octect) {
-        return (octect == 0x20 || octect == 0xd || octect == 0xa || octect == 0x9);
+    private static boolean isWhiteSpace(byte octet) {
+        return (octet == 0x20 || octet == 0xd || octet == 0xa || octet == 0x9);
     }
 
-    private static boolean isPad(byte octect) {
-        return (octect == PAD);
+    private static boolean isPad(byte octet) {
+        return (octet == PAD);
     }
 
-    private static boolean isData(byte octect) {
-        return (octect < BASELENGTH && base64Alphabet[octect] != -1);
+    private static boolean isData(byte octet) {
+        return ((0xff & octet) < BASELENGTH && base64Alphabet[(0xff & octet)] != -1);
     }
 
-    protected static boolean isBase64(byte octect) {
-        return (isWhiteSpace(octect) || isPad(octect) || isData(octect));
+    protected static boolean isBase64(byte octet) {
+        return (isWhiteSpace(octet) || isPad(octet) || isData(octet));
     }
 
     /**
@@ -223,7 +223,7 @@ public class Base64URL extends Codec {
     private static final byte[] EMPTY_STRING = {};
 
     /**
-     * Encodes hex octects into Base64
+     * Encodes hex octets into Base64
      */
     private static class Encoder extends CodecEncoder {
         public Encoder(Codec codec) {

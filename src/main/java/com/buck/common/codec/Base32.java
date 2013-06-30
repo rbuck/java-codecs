@@ -20,7 +20,7 @@ package com.buck.common.codec;
  * Codec for RFC 4648 Base32.
  * <p/>
  * This implementation does not encode/decode streaming data. You need the data
- * that you will encode/decode already on a byte arrray.
+ * that you will encode/decode already on a byte array.
  *
  * @author Robert J. Buck
  */
@@ -83,7 +83,7 @@ public class Base32 extends Codec {
     }
 
     private static boolean isData(byte octet) {
-        return (octet < BASELENGTH && base32Alphabet[octet] != -1);
+        return ((0xff & octet) <= BASELENGTH && base32Alphabet[(0xff & octet)] != -1);
     }
 
     /**
@@ -278,7 +278,7 @@ public class Base32 extends Codec {
     private static final byte[] EMPTY_STRING = {};
 
     /**
-     * Encodes hex octects into Base64
+     * Encodes hex octets into Base64
      */
     private static class Encoder extends CodecEncoder {
         public Encoder(Codec codec) {

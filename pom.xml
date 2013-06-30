@@ -22,7 +22,9 @@
     <version>1.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>java-codecs</name>
-    <description>Codecs library containing support for Base16, Base32, Base64, url-encoded, quoted-printable, percent-encoded, etc. Implemented with an SPI so people may freely add more codecs.</description>
+    <description>Codecs library containing support for Base16, Base32, Base64, url-encoded, quoted-printable,
+        percent-encoded, etc. Implemented with an SPI so people may freely add more codecs.
+    </description>
     <url>https://github.com/rbuck/java-codecs</url>
     <licenses>
         <license>
@@ -105,6 +107,24 @@
             </plugin>
         </plugins>
     </build>
+
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <configuration>
+                    <threshold>Low</threshold><!-- High|Normal|Low|Exp|Ignore -->
+                    <effort>Default</effort><!-- Min|Default|Max -->
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </reporting>
+
 
     <distributionManagement>
         <snapshotRepository>
