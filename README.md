@@ -1,6 +1,8 @@
 Java Codecs
 ===========
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.rbuck/java-codecs/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.rbuck/java-codecs)
+
 [<img src="https://api.travis-ci.org/rbuck/java-codecs.png?branch=master" alt="Build Status" />](http://travis-ci.org/rbuck/java-codecs)
 
 # Description
